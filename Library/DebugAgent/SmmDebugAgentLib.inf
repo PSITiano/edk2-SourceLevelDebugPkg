@@ -1,7 +1,7 @@
 ## @file
 #  Debug Agent library instance for SMM modules.
 #
-#  Copyright (c) 2010, Intel Corporation. All rights reserved.<BR>
+#  Copyright (c) 2010 - 2012, Intel Corporation. All rights reserved.<BR>
 #
 #  This program and the accompanying materials
 #  are licensed and made available under the terms and conditions of the BSD License
@@ -42,8 +42,6 @@
   DebugAgentCommon/Ia32/AsmFuncs.asm   | MSFT
   DebugAgentCommon/Ia32/ArchDebugSupport.h
   DebugAgentCommon/Ia32/ArchDebugSupport.c
-  DebugAgentCommon/Ia32/ArchReadGroupRegister.c
-  DebugAgentCommon/Ia32/ArchRegisters.h
   DebugAgentCommon/Ia32/DebugException.h
 
 [Sources.X64]
@@ -51,8 +49,6 @@
   DebugAgentCommon/X64/AsmFuncs.asm    | MSFT
   DebugAgentCommon/X64/ArchDebugSupport.h
   DebugAgentCommon/X64/ArchDebugSupport.c
-  DebugAgentCommon/X64/ArchReadGroupRegister.c
-  DebugAgentCommon/X64/ArchRegisters.h
   DebugAgentCommon/X64/DebugException.h
 
 [Packages]
@@ -71,6 +67,8 @@
   PcdLib
   SynchronizationLib
   LocalApicLib
+  TimerLib
+  PrintLib
 
 [Guids]
   gEfiDebugAgentGuid                            ## CONSUMES ## Configuration Table
